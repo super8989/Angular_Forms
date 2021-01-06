@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <form>
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div id="user-data">
           <div class="form-group">
             <label for="username">Username</label>
@@ -10,7 +10,7 @@
               id="username"
               class="form-control"
               ngModel
-              name="username"
+              name="usernamess"
             />
           </div>
           <button class="btn btn-default" type="button">
