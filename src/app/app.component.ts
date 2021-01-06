@@ -13,6 +13,7 @@ export class AppComponent {
   @ViewChild('email') emailForm: NgModel;
   defaultQuestion = 'pet';
   answer: string = '';
+  genders: string[] = ['male', 'female'];
 
   // onSubmit(form: NgForm) {
   //   console.log(form);
