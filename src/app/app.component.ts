@@ -12,6 +12,7 @@ export class AppComponent {
   @ViewChild('f') signupForm: NgForm;
   @ViewChild('email') emailForm: NgModel;
   defaultQuestion = 'pet';
+  answer: string = '';
 
   // onSubmit(form: NgForm) {
   //   console.log(form);
@@ -19,6 +20,7 @@ export class AppComponent {
 
   onSubmit() {
     console.log(this.signupForm);
-    console.log('emailform', this.emailForm);
+    // console.log(this.signupForm.value);
+    // console.log('emailform', this.emailForm);
   }
 }
