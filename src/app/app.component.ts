@@ -11,6 +11,7 @@ export class AppComponent {
 
   @ViewChild('f') signupForm: NgForm;
   @ViewChild('email') emailForm: NgModel;
+  defaultQuestion = 'pet';
 
   // onSubmit(form: NgForm) {
   //   console.log(form);
