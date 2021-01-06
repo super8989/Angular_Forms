@@ -15,6 +15,28 @@ export class AppComponent {
   answer: string = '';
   genders: string[] = ['male', 'female'];
 
+  SuggestUserName() {
+    const suggestedName = 'superuser';
+
+    // Overrides the whole form with new values
+    // this.signupForm.setValue({
+    //   userData: {
+    //     username: suggestedName,
+    //     email: '',
+    //   },
+    //   secret: 'pet',
+    //   questionAnswer: 'testing',
+    //   gender: 'male',
+    // });
+
+    // Only fills in the specified input
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName,
+      },
+    });
+  }
+
   // onSubmit(form: NgForm) {
   //   console.log(form);
   // }
