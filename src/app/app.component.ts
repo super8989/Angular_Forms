@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'forms';
 
   @ViewChild('f') signupForm: NgForm;
+  @ViewChild('email') emailForm: NgModel;
 
   // onSubmit(form: NgForm) {
   //   console.log(form);
@@ -17,5 +18,6 @@ export class AppComponent {
 
   onSubmit() {
     console.log(this.signupForm);
+    console.log('emailform', this.emailForm);
   }
 }
