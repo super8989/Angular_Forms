@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -35,10 +36,31 @@ export class AppComponent implements OnInit {
 
     // Reacting to Status Changes
     // this.signupForm.statusChanges.subscribe((status) => console.log(status));
+
+    this.signupForm.setValue({
+      userData: {
+        username: 'Max',
+        email: 'max@power.com',
+      },
+      gender: 'male',
+      hobbies: [],
+    });
+
+    this.signupForm.patchValue({
+      userData: {
+        username: 'Sam',
+      },
+    });
   }
 
   onSubmit() {
     console.log(this.signupForm);
+    this.signupForm.reset();
+
+    // Reset to specific values
+    // this.signupForm.reset({
+    //   gender: 'female',
+    // });
   }
 
   // Adding to the signupForm
